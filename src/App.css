@@ -4,7 +4,7 @@ body {
   color: #fff;
 }
 .no-scrollbar {
-  /* overflow: auto; */
+  overflow: auto;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
