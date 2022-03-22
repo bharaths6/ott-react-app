@@ -19,7 +19,7 @@ export default function ContentWrapper(props) {
             hasMore={hasMore}
             loader={<div className="loader" key={0}>Loading ...</div>}
         >
-            <div className="grid grid-cols-3 pt-20 gap-1p8 content-start">
+            <div className="grid grid-cols-3 pt-14 gap-x-1p8 content-start">
                 {contentInfo.length && <Tile contentList={contentInfo} />}
             </div>
         </InfiniteScroll>

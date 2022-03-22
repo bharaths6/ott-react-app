@@ -4,15 +4,16 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        '1p8': '1.875rem'
+        '1p8': '1.875rem',
+        'p8': '0.875rem'
       },
       backgroundImage: {
         navBarImg: "url('./assets/Slices/nav_bar.png')"
       }
     },
     fontSize: {
-      'fs-a': '45pt',
-      'fs-e': '36pt'
+      'fs-a': '6vw',
+      'fs-e': '3vw'
     }
   },
   variants: {

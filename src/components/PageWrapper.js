@@ -5,10 +5,10 @@ export default function PageWrapper() {
 
     return (
         <>
-            <div className="grid grid-cols-1 content-start fixed bg-navBarImg bg-contain h-24">
+            <div className="grid grid-cols-1 content-start fixed bg-navBarImg bg-cover">
                 <SearchComponent />
             </div>
-            <div className="h-screen no-scrollbar pl-1p8 pr-1p8">
+            <div className="h-screen no-scrollbar pl-p8 pr-1p8">
                 <ContentWrapperContainer />
             </div>
         </>

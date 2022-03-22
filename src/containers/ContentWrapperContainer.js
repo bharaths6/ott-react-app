@@ -5,7 +5,6 @@ import { fetchContent } from 'actions/UserActions';
 const mapStateToProps = (state) => {
   const { contentList } = state;
   const { page: { 'content-items': { content } } } = contentList;
-  debugger;
   return {
     contentInfo: content,
     currentPage: contentList.pageNo,
