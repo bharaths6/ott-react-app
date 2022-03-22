@@ -11,7 +11,7 @@ export default function Tile({ contentList }) {
         <>
             {
                 contentList.length && contentList.map(({ name, 'poster-image': posterImage }, index) => (
-                    <div className="w-full overflow-hidden m-2" key={index}>
+                    <div className="w-full overflow-hidden m-2  min-h-tile" key={index}>
                         <img className="w-full h-42 object-center" src={`Slices/${posterImage}`} onError={loadFallbackImage} />
                         <div className="py-4">
                             <div className="truncate font-regular text-xl mb-2 text-fs-e" title={name}>{name}</div>

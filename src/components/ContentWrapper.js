@@ -18,6 +18,7 @@ export default function ContentWrapper(props) {
             loadMore={loadFunc}
             hasMore={hasMore}
             loader={<div className="loader" key={0}>Loading ...</div>}
+            useWindow={false}
         >
             <div className="grid grid-cols-3 pt-14 gap-x-1p8 content-start">
                 {contentInfo.length && <Tile contentList={contentInfo} />}

@@ -14,6 +14,9 @@ module.exports = {
     fontSize: {
       'fs-a': '6vw',
       'fs-e': '3vw'
+    },
+    minHeight: {
+      'tile': '11rem',
     }
   },
   variants: {
