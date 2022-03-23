@@ -1,4 +1,4 @@
-import { FETCH_CONTENT_SUCCEEDED } from '../constants/ActionTypes';
+import { FETCH_CONTENT_SUCCEEDED, SEARCH_TEXT_CHANGE } from '../constants/ActionTypes';
 
 const initialState = {
   'page': {
@@ -7,6 +7,7 @@ const initialState = {
     }
   },
   pageNo: 0,
+  searchText: '',
   hasMore: true,
 };
 
@@ -29,6 +30,9 @@ export default function contentList(prevState = initialState, action) {
         pageNo: action.pageNo,
         hasMore: action.hasMore
       }
+      return state;
+    case SEARCH_TEXT_CHANGE:
+      state = { ...initialState, searchText: action.data }
       return state;
     default:
       return state;

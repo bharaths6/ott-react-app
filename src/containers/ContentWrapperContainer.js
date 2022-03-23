@@ -9,6 +9,7 @@ const mapStateToProps = (state) => {
     contentInfo: content,
     currentPage: contentList.pageNo,
     hasMore: contentList.hasMore,
+    searchText: contentList.searchText,
   }
 };
 
