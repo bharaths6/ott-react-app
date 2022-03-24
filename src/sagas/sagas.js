@@ -15,13 +15,13 @@ function* getContentList(action) {
     const { pageNo, searchText } = action.data;
     const list = yield call(getContentInfoApi, pageNo);
     let { page: { 'content-items': contentItems, ...pageMeta } } = list;
-    if(searchText) {
-      contentItems.content = contentItems.content.filter(ci => pageMeta.title === searchText)
-    }
+
+    contentItems.content = contentItems.content.filter(item => item.name.trim().toLowerCase().includes(searchText));
+
     const response = {
       content: contentItems.content,
       ...action.data,
-      hasMore: contentItems.content.length && !!(pageMeta['page-size-requested'] * pageMeta['page-num-requested'] < pageMeta['total-content-items']),
+      hasMore: !!(pageMeta['page-size-requested'] * pageMeta['page-num-requested'] < pageMeta['total-content-items']),
     }
     yield put({ type: actionType.FETCH_CONTENT_SUCCEEDED, ...response });
   } catch (e) {
